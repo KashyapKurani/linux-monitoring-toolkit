@@ -113,7 +113,7 @@ Run the script:
 
 ## Sample Output
 
-###Report Generation
+### Report Generation
 ![Report Generation](screenshots/Report-Generation.png)
 
 ### Report Header
