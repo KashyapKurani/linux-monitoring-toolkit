@@ -16,6 +16,7 @@ This script provides a quick overview of system health by displaying CPU utiliza
 * Top 5 Memory-Consuming Processes
 * Clean and formatted terminal output
 * Lightweight and dependency-free (except `bc`)
+* Automatic Timestamped Report Generation
 
 ---
 
@@ -111,6 +112,9 @@ Run the script:
 ---
 
 ## Sample Output
+
+###Report Generation
+![Report Generation](screenshots/Report-Generation.png)
 
 ### Report Header
 ![Report Header](screenshots/System-Report.png)
