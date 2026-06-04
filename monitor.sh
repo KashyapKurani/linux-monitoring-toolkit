@@ -4,6 +4,13 @@
 # Author: Kashyap Kurani
 # Version: 1.0
 
+TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+REPORT_FILE="reports/report_$TIMESTAMP.txt"
+
+exec > >(tee "$REPORT_FILE") 2>&1
+
+echo "Report File: $REPORT_FILE"
+
 echo "======================================================"
 
 echo "            Linux Server Monitoring Report            "
