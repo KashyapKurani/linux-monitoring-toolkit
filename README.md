@@ -36,13 +36,18 @@ This script provides a quick overview of system health by displaying CPU utiliza
 
 ```text
 linux-server-monitor/
-│
-├── monitor.sh
-├── reports/
-├── screenshots/
-├── README.md
+|
+├── .gitignore
 ├── LICENSE
-└── .gitignore
+├── README.md
+├── monitor.sh
+├── reports
+│   └── .gitkeep
+└── screenshots
+    ├── .gitkeep
+    ├── CPU-Memory-Disk Usage.png
+    ├── System-Report.png
+    └── Top-Processors.png
 ```
 
 ---
@@ -107,32 +112,14 @@ Run the script:
 
 ## Sample Output
 
-```text
-======================================================
-            Linux Server Monitoring Report
+### Report Header
+![Report Header](screenshots/System-Report.png)
 
-Generated on Thu Jun 04 16:30:00 IST 2026
-======================================================
+### CPU and Memory and Disk Usage
+![CPU Memory](screenshots/CPU-Memory-Disk-Usage.png)
 
-System UPTIME
-...
-
-CPU USAGE
-...
-CPU Utilization: 12.5%
-
-MEMORY USAGE
-...
-
-DISK USAGE
-...
-
-TOP 5 CPU PROCESSES
-...
-
-TOP 5 MEMORY PROCESSES
-...
-```
+### Top Processes
+![Processes](screenshots/Top-Processors.png)
 
 ---
 
