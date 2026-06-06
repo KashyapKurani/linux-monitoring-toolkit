@@ -1,0 +1,40 @@
+2026-06-06 12:00:01 INFO Service started successfully from 192.168.1.10
+2026-06-06 12:00:05 INFO Health check passed for component A
+2026-06-06 12:01:15 WARNING Disk usage high on /var (85%) 10.0.0.5
+2026-06-06 12:02:20 ERROR Unable to open configuration file /etc/app/conf 192.168.1.5
+2026-06-06 12:03:33 INFO Connection established to 10.0.0.8
+2026-06-06 12:04:10 ERROR Failed to write to DB: timeout 192.168.1.5
+2026-06-06 12:05:00 FAILED_LOGIN alice 192.168.1.100
+2026-06-06 12:05:05 INFO User session started for alice 192.168.1.100
+2026-06-06 12:06:44 ERROR NullPointerException in module auth 10.0.0.7
+2026-06-06 12:07:10 WARNING High memory usage in worker 192.168.1.11
+2026-06-06 12:07:15 FAILED_LOGIN bob 10.0.0.9
+2026-06-06 12:08:22 INFO Scheduled job `backup` completed
+2026-06-06 12:09:30 ERROR Unable to allocate buffer 192.168.1.5
+2026-06-06 12:10:00 INFO Service health OK
+2026-06-06 12:11:12 FAILED_LOGIN alice 192.168.1.100
+2026-06-06 12:12:18 ERROR Disk read error on /dev/sda 10.0.0.8
+2026-06-06 12:13:21 INFO New connection from 203.0.113.45
+2026-06-06 12:14:35 ERROR Failed to parse request from client 203.0.113.45
+2026-06-06 12:15:40 WARNING Slow response from upstream 10.0.0.5
+2026-06-06 12:16:01 INFO Cache miss for key user:42
+2026-06-06 12:17:02 FAILED_LOGIN charlie 198.51.100.23
+2026-06-06 12:18:33 ERROR Authentication service timeout 10.0.0.7
+2026-06-06 12:19:44 INFO Background task cleanup done
+2026-06-06 12:20:55 ERROR Failed to send email: SMTP connection refused 192.0.2.11
+2026-06-06 12:21:11 FAILED_LOGIN alice 192.168.1.100
+2026-06-06 12:22:22 INFO Metrics pushed to monitoring
+2026-06-06 12:23:33 ERROR Unexpected EOF while reading socket 10.0.0.8
+2026-06-06 12:24:44 WARNING Possible configuration drift detected
+2026-06-06 12:25:55 INFO User `admin` logged in from 203.0.113.45
+2026-06-06 12:26:06 ERROR Corrupt message received from 10.0.0.5
+2026-06-06 12:27:17 INFO Maintenance window scheduled
+2026-06-06 12:28:28 FAILED_LOGIN dave 10.0.0.9
+2026-06-06 12:29:39 ERROR Resource limit reached: threads 192.168.1.11
+2026-06-06 12:30:40 INFO Shutdown initiated
+2026-06-06 12:31:41 ERROR Failed to reload module network 10.0.0.7
+2026-06-06 12:32:52 INFO Restart complete
+2026-06-06 12:33:03 FAILED_LOGIN bob 10.0.0.9
+2026-06-06 12:34:14 ERROR Timeout while contacting auth server 192.168.1.5
+2026-06-06 12:35:25 INFO All services running
+ 

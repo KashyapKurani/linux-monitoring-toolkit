@@ -1,22 +1,32 @@
-# Linux Server Monitor
+# Linux Monitoring & Log Analysis Toolkit
 
-A lightweight Linux server monitoring tool built using Bash scripting.
+A Bash-based Linux operations toolkit that provides system monitoring, report generation, and log analysis capabilities.
 
-This script provides a quick overview of system health by displaying CPU utilization, memory usage, disk usage, system uptime, and the top resource-consuming processes.
+This project demonstrates practical Linux administration, Bash scripting, monitoring, troubleshooting, and log analytics skills commonly used by DevOps and Cloud Engineers.
 
 ---
 
 ## Features
 
+### System Monitoring
+
 * System Uptime Monitoring
-* CPU Utilization Calculation
+* CPU Utilization Monitoring
 * Memory Usage Monitoring
 * Disk Usage Monitoring
 * Top 5 CPU-Consuming Processes
 * Top 5 Memory-Consuming Processes
-* Clean and formatted terminal output
-* Lightweight and dependency-free (except `bc`)
 * Automatic Timestamped Report Generation
+
+### Log Analysis
+
+* Analyze one or multiple log files
+* Count INFO, WARNING, ERROR, and FAILED_LOGIN events
+* Display last 10 error messages
+* Identify top error patterns
+* Detect most frequent IP addresses
+* Track failed login attempts by username
+* Input validation and error handling
 
 ---
 
@@ -25,11 +35,13 @@ This script provides a quick overview of system health by displaying CPU utiliza
 * Linux
 * Bash Scripting
 * AWK
-* top
-* ps
-* free
-* df
-* bc
+* Grep
+* Sort
+* Uniq
+* WC
+* Top
+* PS
+* BC
 
 ---
 
@@ -37,65 +49,26 @@ This script provides a quick overview of system health by displaying CPU utiliza
 
 ```text
 linux-server-monitor/
-|
-├── .gitignore
-├── LICENSE
-├── README.md
+│
 ├── monitor.sh
-├── reports
-│   └── .gitkeep
-└── screenshots
-    ├── .gitkeep
-    ├── CPU-Memory-Disk Usage.png
-    ├── System-Report.png
-    └── Top-Processors.png
+├── log_analyzer.sh
+│
+├── reports/
+│   └── .gitkeep
+│
+├── sample-logs/
+│   └── sample.log
+│
+├── screenshots/
+│
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## Prerequisites
-
-Ensure the following utilities are available on your Linux system:
-
-```bash
-bash
-top
-awk
-ps
-free
-df
-bc
-```
-
-Install `bc` if it is not already installed.
-
-Ubuntu/Debian:
-
-```bash
-sudo apt install bc
-```
-
-RHEL/CentOS:
-
-```bash
-sudo yum install bc
-```
-
----
-
-## How to Run
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-Navigate to the project directory:
-
-```bash
-cd linux-server-monitor
-```
+## System Monitoring Usage
 
 Make the script executable:
 
@@ -103,53 +76,117 @@ Make the script executable:
 chmod +x monitor.sh
 ```
 
-Run the script:
+Run:
 
 ```bash
 ./monitor.sh
+```
+
+A timestamped report will automatically be generated:
+
+```text
+reports/report_YYYY-MM-DD_HH-MM-SS.txt
+```
+
+---
+
+## Log Analyzer Usage
+
+Make the script executable:
+
+```bash
+chmod +x log_analyzer.sh
+```
+
+Analyze a single log file:
+
+```bash
+./log_analyzer.sh sample-logs/sample.log
+```
+
+Analyze multiple log files:
+
+```bash
+./log_analyzer.sh app.log auth.log nginx.log
 ```
 
 ---
 
 ## Sample Output
 
-### Report Generation
-![Report Generation](screenshots/Report-Generation.png)
+### Monitoring Report
 
-### Report Header
-![Report Header](screenshots/System-Report.png)
+Displays:
 
-### CPU and Memory and Disk Usage
-![CPU Memory](screenshots/CPU-Memory-Disk-Usage.png)
+* System uptime
+* CPU utilization
+* Memory utilization
+* Disk utilization
+* Top CPU-consuming processes
+* Top memory-consuming processes
 
-### Top Processes
-![Processes](screenshots/Top-Processors.png)
+### Log Analysis Report
+
+Displays:
+
+* Total log entries
+* Error, warning and info counts
+* Failed login attempts
+* Recent errors
+* Top error messages
+* Top IP addresses
 
 ---
 
-## Learning Objectives
+## Screenshots
 
-This project demonstrates practical knowledge of:
+### System Monitoring Report
 
-* Linux System Administration
-* Shell Scripting
+![System Report](screenshots/System-Report.png)
+
+### CPU, Memory and Disk Usage
+
+![CPU Memory Disk](screenshots/CPU-Memory-Disk-Usage.png)
+
+### Top Processes
+
+![Top Processes](screenshots/Top-Processes.png)
+
+### Report Generation
+
+![Report Generation](screenshots/Report-Generation.png)
+
+### Log Analysis Report
+
+![Log Analysis](screenshots/Log-Analysis-Report.png)
+
+---
+
+## Learning Outcomes
+
+This project demonstrates:
+
+* Linux Administration
+* Bash Scripting
 * Process Monitoring
-* Resource Utilization Analysis
-* Command-Line Automation
-* Text Processing using AWK
+* Log Analysis
+* Linux Troubleshooting
+* Text Processing with AWK
+* Regular Expressions
+* Report Generation
+* Shell Script Automation
 
 ---
 
 ## Future Enhancements
 
-* Generate timestamped report files
-* Export reports to logs
-* Colorized terminal output
-* CPU, Memory and Disk threshold alerts
-* Email notifications
-* Cron job automation
-* Docker containerization
-* Multi-server monitoring
+* Health Status Checks
+* CPU / Memory / Disk Threshold Alerts
+* Email Notifications
+* Colorized Output
+* Support for Real Linux Authentication Logs
+* Scheduled Execution via Cron
+* Docker Containerization
 
 ---
 
@@ -157,9 +194,6 @@ This project demonstrates practical knowledge of:
 
 Kashyap Kurani
 
----
-
 ## License
 
-This project is licensed under the MIT License.
-
+Licensed under the MIT License.
